@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Crop Dashboard</title>
+    <!-- Link to our style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for the UI icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- HEADER SECTON -->
+        <header class="main-header">
+            <div class="logo-area">
+                <i class="fas fa-leaf text-green"></i>
+                <h1>Daily Crop Dashboard</h1>
+            </div>
+            <div class="meta-info">
+                <div class="location"><i class="fas fa-map-marker-alt"></i> Karnataka, India</div>
+                <div class="date"><i class="fas fa-calendar-alt"></i> 11 Jun 2026 (Today)</div>
+            </div>
+        </header>
+
+        <div class="layout-body">
+            <!-- SIDE NAVIGATION BAR -->
+            <nav class="sidebar">
+                <ul>
+                    <li class="active"><i class="fas fa-home"></i> Home</li>
+                    <li><i class="fas fa-seedling"></i> My Crops</li>
+                    <li><i class="fas fa-chart-line"></i> Market Prices</li>
+                    <li><i class="fas fa-cloud-sun"></i> Weather</li>
+                    <li><i class="fas fa-lightbulb"></i> Farming Tips</li>
+                </ul>
+            </nav>
+
+            <!-- MAIN GRID CONTENT MAP -->
+            <main class="content-grid">
+                <!-- Weather Card -->
+                <section class="card weather-card">
+                    <h2><i class="fas fa-cloud-sun"></i> Weather Today</h2>
+                    <div class="weather-main">
+                        <span class="temp">29°C</span>
+                        <p>Scattered Clouds</p>
+                    </div>
+                </section>
+
+                <!-- Crop Status Card -->
+                <section class="card status-card">
+                    <h2><i class="fas fa-seedling"></i> My Crop Status</h2>
+                    <label for="crop-select">Select Crop:</label>
+                    <select id="crop-select">
+                        <option value="rice">Rice (Paddy)</option>
+                        <option value="maize">Maize</option>
+                    </select>
+                    <div class="progress-container">
+                        <p>Growth Stage: Mid-Season</p>
+                        <div class="progress-bar"><div class="fill" style="width: 65%;"></div></div>
+                    </div>
+                </section>
+
+                <!-- Market Card -->
+                <section class="card prices-card">
+                    <h2><i class="fas fa-chart-line"></i> Market Prices</h2>
+                    <ul>
+                        <li>Rice: ₹2,400/Quintal <span class="up">▲</span></li>
+                        <li>Maize: ₹1,950/Quintal <span class="down">▼</span></li>
+                    </ul>
+                </section>
+
+                <!-- Advice Card -->
+                <section class="card advice-card">
+                    <h2><i class="fas fa-lightbulb"></i> Today's Advice</h2>
+                    <p><i class="fas fa-check-circle"></i> Optimal watering window open between 4 PM - 6 PM.</p>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript interactive rules -->
+    <script src="script.js"></script>
+</body>
+</html>
